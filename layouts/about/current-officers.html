@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $currentOfficers := index (sort .RegularPages "Title" "desc") 0 }}
+{{ $currentOfficers := index (sort .RegularPages "Title" "asc") 0 }}
 
 <header>
     {{ partial "breadcrumb/breadcrumbs" . }}
@@ -25,6 +25,8 @@
         </ul>
         {{ end }}
     {{ end }}
+
+    {{ partial "pages/pager" . }}
 </article>
 
 {{ end }}
