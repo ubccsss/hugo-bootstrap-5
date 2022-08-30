@@ -12,12 +12,12 @@
   <div class="col">
     <h3>{{ .position }}</h3>
     <div>
-      <h4 class="d-inline fs-6 fw-bold" style="font: inherit">Name: </h4>
+      <h4 class="d-inline fs-6 fw-bold" style="font: inherit; margin-right: 0.5ch">Name:</h4>
       <span>{{ .name }}</span>
     </div>
     {{ with .email }}
     <div>
-      <h4 class="d-inline fs-6 fw-bold" style="font: inherit">Email: </h4>
+      <h4 class="d-inline fs-6 fw-bold" style="font: inherit; margin-right: 0.5ch">Email:</h4>
       <code>{{ replace (replace . "@" " [at] ") "." " [dot] " }}</code>
     </div>
     {{ end }}
